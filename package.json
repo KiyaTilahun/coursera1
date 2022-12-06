@@ -1,19 +1,5 @@
 {
-  "name": "gittest",
-  "version": "1.0.0",
-  "description": "\"this is a course\"",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KiyaTilahun/best.git"
-  },
-  "author": "kiya tilahun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KiyaTilahun/gittest/issues"
-  },
-  "homepage": "https://github.com/KiyaTilahun/best#readme"
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
