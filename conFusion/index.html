@@ -10,7 +10,8 @@
     />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
 <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" >
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
   </head>
   <body>
@@ -38,7 +39,7 @@
             <li class="nav-item"><a href="" class="nav-link"> <span class="fa fa-list fa-lg"></span>Menu</a></li>
             <li class="nav-item"><a href="contactus.html" class="nav-link"> <span class="fa fa-address-card"></span>Contact</a></li>
           </ul>
-          <span class="navbar-text"><a href="#"  data-toggle="modal" data-target="#loginModal">
+          <span class="navbar-text" id="login"><a href="#"  >
             <span class="fa fa-sign-in">Login</span>
           </a>
           </span>
@@ -48,11 +49,11 @@
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header head">
             <h4 class="modal-title">Login</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          <div class="modal-body">     <form>
+          <div class="modal-body body">     <form>
             <div class="form-row">
                 <div class="form-group col-sm-4">
                         <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -93,18 +94,18 @@
           <div class="col-6 col-sm-2 d-none d-sm-block align-self-center">
             <img src="img/logo.png" alt="" class="IMG-FLUID">
         </div>
-        <div class="col-6 col-sm-2 offset-3 offset-sm-1 align-self-center"><button class="btn back btn"><a  class="nav-link back" href="#form" data-toggle="modal" data-target="#reserve">Reserve Table</a></button></div>
+        <div class="col-6 col-sm-2 offset-3 offset-sm-1 align-self-center"><button id="res" class="btn back btn"><a  class="nav-link back" href="#form" >Reserve Table</a></button></div>
         </div>
       </div>
     </header>
     <div class="modal fade" id="reserve">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header head">
             <div class="modal-title"><h2>Reserve a Table</h2></div>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body body">
             <form action="" class="form " id="form">
               <div class="form-group row">
               <label for="" class=" col-sm-3 form-label">Number Of Guests</label>
@@ -376,7 +377,13 @@
       $(document).ready(function(){
         $("#mycar").carousel({interval:1000});
       })
-      
+      $("#login").click(function(){
+        $("#loginModal").modal("toggle");
+      })
+ 
+      $("#res").click(function(){
+        $("#reserve").modal("toggle");
+      })
       $("#carouselButton").click(function(){
         if($('#carouselButton').children('span').hasClass('fa fa-pause')){
           $('#mycar').carousel('pause');
