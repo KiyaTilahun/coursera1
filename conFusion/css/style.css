@@ -71,3 +71,9 @@ body{
 
 .head {
   background-color: #512DA8; }
+.times{
+  color: #ddd;
+}
+span .times:hover{
+color: #D1C4E9;
+}
